@@ -1,0 +1,5 @@
+{
+	"version": 1,
+	"builds": [{ "src": "package.json", "use": "@now/static-build" }],
+	"name" : "cli-tools-at-vip"
+}
