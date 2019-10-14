@@ -1,5 +1,9 @@
-import { Split } from 'mdx-deck'
-import { Head } from 'mdx-deck'
+import {
+  Split,
+  Appear,
+  Head,
+  FullScreenCode,
+} from 'mdx-deck'
 import { code } from '@mdx-deck/themes'
 
 export const theme = code
@@ -36,21 +40,50 @@ export const theme = code
 
 ---
 
-import { CodeSurfer } from "mdx-deck-code-surfer"
+<FullScreenCode>
 
-<CodeSurfer
-  title="Some Title"
-  code="hi"
-  lang="javascript"
-  showNumbers={false}
-  dark={false}
-  steps={[
-    { notes: "Start with this note"},
-    { lines: [6], notes: "Note for the first step" },
-    { range: [5, 9] },
-    { tokens: { 9: [3, 4, 5] }, notes: "Note for the third step" }
-  ]}
-/>
+```bash
+$ ls
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls
+README.md		node_modules		now.json		package.json
+deck.mdx		notes.md		package-lock.json	theme.js
+```
+
+</FullScreenCode>
+
+---
+
+# Arguments
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls ~/Desktop
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls ~/Desktop
+cats.gif		otters.jpg		camel-parade.mp4
+```
+
+</FullScreenCode>
 
 ---
 
