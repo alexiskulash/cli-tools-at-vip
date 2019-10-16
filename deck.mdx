@@ -90,7 +90,7 @@ camels.mp4	camels.txt	cats.gif	otters.jpg
 
 # Exercise
 
-## List all the files on your desktop via CLI
+List all the files on your desktop via CLI
 
 ---
 
@@ -194,7 +194,7 @@ $ ls content > files.txt
 
 ---
 
-# Where's my output???
+## Where's my output???
 
 ---
 
@@ -303,9 +303,9 @@ The word camel is derived via Latin
 
 ---
 
-# Tab Completion
+## Tab Completion
 
-## Save typing with filename autocomplete
+Save typing with filename autocomplete
 
 ---
 
@@ -381,15 +381,15 @@ $ cat content/camels.txt
 
 ---
 
-# History
+## History
 
-# Up/down arrows to access previous commands
+Up/down arrows to access previous commands
 
 ---
 
-# man pages
+## man pages
 
-## Manual Pages
+(Manual Pages)
 
 ---
 
@@ -403,7 +403,7 @@ $ man curl
 
 ---
 
-# Multiple Windows
+## Multiple Windows
 
 ---
 
@@ -424,7 +424,7 @@ $ man curl
 
 ---
 
-# Get sandboxed
+## Get sandboxed
 
 ---
 
@@ -490,7 +490,7 @@ $ wp help post
 
 # Exercise
 
-## Save all the ID and title of all posts as CSV into post_ids.csv
+Save the ID and title of all posts as into post_ids.csv as CSV
 
 ---
 
@@ -559,44 +559,21 @@ class WP_Post#3083 (24) {
 
 ---
 
-# WP CLI W/o Sandboxing
+## WP CLI W/o Sandboxing
 
 ---
 
 <FullScreenCode>
 
 ```bash
-$ vip @297.testing -- wp post list --format=csv
---fields=ID,post_title --posts_per_page=10
+$ vip @297.testing -- wp post get 2323
 ```
 
 </FullScreenCode>
 
 ---
 
-<FullScreenCode>
-
-```bash
-$ vip @297.testing -- wp post list --format=csv
---fields=ID,post_title --posts_per_page=10
-ID,post_title
-1807,"Test Post22233"
-1791,"Hello Test 1 2 3 Test"
-1789,"Testing 1 2 3"
-1786,Testestsetsetst
-1784,"Another Test Post"
-1782,"Testing Post"
-1781,"Testing 1 2 3"
-1750,"hello hello hello"
-1746,"Thgere are GEESE in the wild !"
-1744,"There are bears in the wild !"
-```
-
-</FullScreenCode>
-
----
-
-# Pseudo-shell
+## Pseudo-shell
 
 ---
 
@@ -636,7 +613,7 @@ vip-test.testing:~$ wp post list
 
 # Exercise
 
-## Using `vip`, get the value cached for the key `"alloptions"` in the `"options"` group
+Using `vip`, get the value cached for the key `"alloptions"` in the `"options"` group on site 297 (vip-test.go-vip.co)
 
 ---
 
@@ -646,7 +623,7 @@ vip-test.testing:~$ wp post list
 
 ---
 
-# API Requests
+## API Requests
 
 ---
 
