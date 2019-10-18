@@ -490,7 +490,39 @@ $ wp help post
 
 # Exercise
 
-Save the ID and title of all posts as into post_ids.csv as CSV
+Save the ID and title of all posts as a CSV in post_ids.csv
+
+---
+
+# `wp post generate`
+
+## Create new posts with dummy data
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp help post generate
+```
+
+</FullScreenCode>
+
+---
+
+# `wp user create`
+
+## Create new users
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp help user create
+```
+
+</FullScreenCode>
 
 ---
 
@@ -631,6 +663,34 @@ Using `vip`, get the value cached for the key `"alloptions"` in the `"options"` 
 
 ```bash
 $ vipgo api get "/sites?search=test&pagesize=3"
+```
+
+</FullScreenCode>
+
+---
+
+## DB Queries
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vipgo db vip-test.go-vip.co
+```
+
+</FullScreenCode>
+
+---
+
+## Probes
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vipgo probe list --type memcached --site 297
 ```
 
 </FullScreenCode>
