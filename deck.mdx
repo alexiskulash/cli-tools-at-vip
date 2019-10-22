@@ -31,13 +31,24 @@ export const theme = theTheme
 
 ---
 
-# Basic examples
+<ul>
+  <Appear>
+	<li>Basic Examples</li>
+	<li>Shell Tricks</li>
+	<li>`wp` CLI</li>
+	<li>`vip` CLI</li>
+  <li>`vipgo` CLI</li>
+	<li>Q&A</li>
+  </Appear>
+</ul>
 
 ---
 
-# `ls`
+# Basic Examples
 
-## list files
+---
+
+## List files
 
 ---
 
@@ -144,7 +155,7 @@ $ ls -a content
 
 ---
 
-# Combining Options
+# Combining options
 
 ---
 
@@ -173,10 +184,6 @@ drwxr-xr-x  13 nickdaugherty  staff  416 Oct 15 16:27 ..
 ```
 
 </FullScreenCode>
-
----
-
-# Input and Output
 
 ---
 
@@ -299,11 +306,36 @@ The word camel is derived via Latin
 
 ---
 
+## Building from another command
+
+---
+
+<FullScreenCode>
+
+```bash
+$ find content -name "*.mp4" | xargs -I % open %
+```
+
+</FullScreenCode>
+
+---
+
+
+<FullScreenCode>
+
+```bash
+$ find content -name "*.mp4" | xargs -tI % open %
+```
+
+</FullScreenCode>
+
+---
+
 # Shell Tricks
 
 ---
 
-## Tab Completion
+## Tab completion
 
 Save typing with filename autocomplete
 
@@ -383,13 +415,13 @@ $ cat content/camels.txt
 
 ## History
 
-Up/down arrows to access previous commands
+Use up/down arrows to access previous commands
 
 ---
 
 ## man pages
 
-(Manual Pages)
+## Manual pages with commmand info
 
 ---
 
@@ -403,7 +435,7 @@ $ man curl
 
 ---
 
-## Multiple Windows
+## Multiple windows
 
 ---
 
@@ -421,6 +453,10 @@ $ man curl
 # WP CLI
 
 ## Control WP from the command line
+
+---
+
+developer.wordpress.org/cli/commands
 
 ---
 
@@ -452,6 +488,7 @@ $ wp help
 
 ```bash
 $ wp help
+
 NAME
 
   wp
@@ -510,7 +547,9 @@ $ wp help post generate
 
 ---
 
-# `wp user create`
+## `wp user create`
+
+---
 
 ## Create new users
 
@@ -526,7 +565,33 @@ $ wp help user create
 
 ---
 
-# `wp shell`
+# `wp site list`
+
+---
+
+## List all sites in a multisite environment
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp help site list
+```
+
+</FullScreenCode>
+
+---
+
+# Exercise
+
+List the themes for each site on multisite-demo.go-vip.co using `xargs`
+
+---
+
+## `wp shell`
+
+---
 
 ## Execute arbitrary PHP code
 
@@ -591,7 +656,7 @@ class WP_Post#3083 (24) {
 
 ---
 
-## WP CLI W/o Sandboxing
+## Run WP CLI without sandboxing
 
 ---
 
@@ -669,7 +734,7 @@ $ vipgo api get "/sites?search=test&pagesize=3"
 
 ---
 
-## DB Queries
+## Database Queries
 
 ---
 
