@@ -1,0 +1,166 @@
+import { FullScreenCode } from 'mdx-deck';
+
+# WP CLI
+
+## Control WP from the command line
+
+---
+
+## Get sandboxed
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vipgo sandbox start vip-test.go-vip.co
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp help
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp help
+NAME
+
+  wp
+
+DESCRIPTION
+
+  Manage WordPress through the command-line.
+
+SYNOPSIS
+
+  wp <command>
+
+SUBCOMMANDS
+
+  akismet                      Filter spam comments.
+  cache                        Adds, removes, fetches, and flushes the WP Object Cache object.
+  cap                          Adds, removes, and lists capabilities of a user role.
+  cli                          Review current WP-CLI info, check for updates, or see defined aliases.
+  co-authors-plus              Co-Authors Plus commands for the WP-CLI framework
+:
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp help post
+```
+
+</FullScreenCode>
+
+---
+
+# Exercise
+
+Save the ID and title of all posts as a CSV in post_ids.csv
+
+---
+
+# `wp post generate`
+
+## Create new posts with dummy data
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp help post generate
+```
+
+</FullScreenCode>
+
+---
+
+# `wp user create`
+
+## Create new users
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp help user create
+```
+
+</FullScreenCode>
+
+---
+
+# `wp shell`
+
+## Execute arbitrary PHP code
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp shell
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp shell
+wp>
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp shell
+wp> get_post( 2323 );
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ wp shell
+wp> get_post( 2323 );
+class WP_Post#3083 (24) {
+  public $ID =>
+  int(2323)
+  public $post_author =>
+  string(1) "0"
+  public $post_date =>
+  string(19) "1999-01-19 18:01:13"
+  public $post_date_gmt =>
+  string(19) "1970-01-01 00:00:00"
+  public $post_content =>
+```
+
+</FullScreenCode>

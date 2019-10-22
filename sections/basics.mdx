@@ -1,0 +1,267 @@
+import { FullScreenCode } from 'mdx-deck';
+
+# Basic examples
+
+---
+
+# `ls`
+
+## list files
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls
+README.md		node_modules		now.json		package.json
+deck.mdx		notes.md		package-lock.json	theme.js
+```
+
+</FullScreenCode>
+
+---
+
+# Arguments
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls content
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls content
+camels.mp4	camels.txt	cats.gif	otters.jpg
+```
+
+</FullScreenCode>
+
+---
+
+# Exercise
+
+List all the files on your desktop via CLI
+
+---
+
+# Options
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls -l content
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls -l content
+total 11624
+-rw-rw-rw-@ 1 nickdaugherty  staff   431015 Oct 15 16:35 camels.mp4
+-rw-r--r--  1 nickdaugherty  staff    10155 Oct 15 16:55 camels.txt
+-rw-rw-rw-@ 1 nickdaugherty  staff  4693925 Oct 15 16:33 cats.gif
+-rw-rw-rw-@ 1 nickdaugherty  staff   141734 Oct 15 16:40 otters.jpg
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls -a content
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls -a content
+.		..		.hidden-file	camels.mp4	camels.txt  cats.gif	otters.jpg
+```
+
+</FullScreenCode>
+
+---
+
+# Combining Options
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls -la content
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls -la content
+total 11624
+drwxr-xr-x   6 nickdaugherty  staff  192 Oct 15 16:28 .
+drwxr-xr-x  13 nickdaugherty  staff  416 Oct 15 16:27 ..
+-rw-r--r--   1 nickdaugherty  staff    0 Oct 15 16:28 .hidden-file
+-rw-r--r--   1 nickdaugherty  staff    0 Oct 15 16:26 camels.mp4
+-rw-r--r--   1 nickdaugherty  staff    10155 Oct 15 16:55 camels.txt
+-rw-r--r--   1 nickdaugherty  staff    0 Oct 15 16:26 cats.gif
+-rw-r--r--   1 nickdaugherty  staff    0 Oct 15 16:26 otters.jpg
+```
+
+</FullScreenCode>
+
+---
+
+# Input and Output
+
+---
+
+## Sending output to a file
+
+---
+
+<FullScreenCode>
+
+```bash
+$ ls content > files.txt
+```
+
+</FullScreenCode>
+
+---
+
+## Where's my output???
+
+---
+
+<FullScreenCode>
+
+```bash
+$ cat files.txt
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ cat files.txt
+camels.mp4
+cats.gif
+otters.jpg
+```
+
+</FullScreenCode>
+
+---
+
+## Reading input from a file
+
+---
+
+<FullScreenCode>
+
+```bash
+$ less < content/camels.txt
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ less < content/camels.txt
+A camel is an even-toed ungulate...
+:
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ less < content/camels.txt
+A camel is an even-toed ungulate...
+The word camel is derived via Latin
+:
+```
+
+</FullScreenCode>
+
+---
+
+## Input from another command
+
+---
+
+<FullScreenCode>
+
+```bash
+$ cat content/camels.txt | less
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ cat content/camels.txt | less
+A camel is an even-toed ungulate...
+:
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ cat content/camels.txt | less
+A camel is an even-toed ungulate...
+The word camel is derived via Latin
+:
+```
+
+</FullScreenCode>

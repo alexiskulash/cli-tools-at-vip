@@ -1,0 +1,111 @@
+import { FullScreenCode } from 'mdx-deck';
+
+# `vip` CLI
+
+## Control VIP from the command line
+
+---
+
+## WP CLI w/o Sandboxing
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vip @297.testing -- wp post get 2323
+```
+
+</FullScreenCode>
+
+---
+
+## Pseudo-shell
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vip @297.testing -- wp
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vip @297.testing -- wp
+Welcome to the WP CLI shell for the testing environment of vip-test (vip-test.go-vip.co)!
+vip-test.testing:~$
+```
+
+</FullScreenCode>
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vip @297.testing -- wp
+Welcome to the WP CLI shell for the testing environment of vip-test (vip-test.go-vip.co)!
+vip-test.testing:~$ wp post list
+```
+
+</FullScreenCode>
+
+---
+
+# Exercise
+
+Using `vip`, get the value cached for the key `"alloptions"` in the `"options"` group on site 297 (vip-test.go-vip.co)
+
+---
+
+# `vipgo` CLI
+
+## Control VIP from the command line
+
+---
+
+## API Requests
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vipgo api get "/sites?search=test&pagesize=3"
+```
+
+</FullScreenCode>
+
+---
+
+## DB Queries
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vipgo db vip-test.go-vip.co
+```
+
+</FullScreenCode>
+
+---
+
+## Probes
+
+---
+
+<FullScreenCode>
+
+```bash
+$ vipgo probe list --type memcached --site 297
+```
+
+</FullScreenCode>

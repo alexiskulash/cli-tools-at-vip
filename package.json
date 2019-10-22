@@ -3,8 +3,8 @@
   "name": "cli-tools-at-vip",
   "version": "1.0.0",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
+    "start": "mdx-deck deck.js",
+    "build": "mdx-deck build deck.js",
     "now-build": "npm run build",
     "help": "mdx-deck"
   },
